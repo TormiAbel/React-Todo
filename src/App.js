@@ -8,9 +8,7 @@ function App() {
     <div className="App">
         <button onChange={() => setUser({name: "Tormi"})}>Login</button>
         {!user && <Login />}
-        {user && <ListView />}
+        {user && <TaskView />}
     </div>
   );
 }
-
-export default App;
