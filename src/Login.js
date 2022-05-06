@@ -3,18 +3,30 @@ import React, { useState } from 'react';
 
 export default function Login() {
   let [username, setUsername] = useState(null);
-  let [password, setpassword] = useState(null);
+  let [password, setPassword] = useState(null);
+  const secretKey = "pass"
   
-  const userNN = (event) => {
-    setUsername(event.target.value)
+  const userNN = nn => {
+    setUsername(nn.event.value)
   }
   
+  const passwordInput = pw => {
+    setPassword(pw.event.value)
+  }
+  
+  const checkStats = () => {
+    if (password === secretkey) {
+    setUser(username)
+    }
+  }
   
   return (
     <div className="App">
-        <button onChange={() => setUser({name: "Tormi"})}>Login</button>
-        {!user && <Login />}
-        {user && <ListView />}
+    <header className="App-header">
+        <input onChange={userNN}/>
+        <input onChange={passwordInput}/>
+        <button onClick={checkStats}/>
+    </header>
     </div>
   );
 }
