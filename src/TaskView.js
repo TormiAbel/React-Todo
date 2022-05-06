@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 
-function App() {
+function TaskView() {
   let [taskName, setTaskName] = useState("");
   let [taskList, setTaskList] = useState(["t1", "t2"]);
 
@@ -36,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default TaskView;
