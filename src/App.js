@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import TaskView from './TaskView'
+import TaskView from './TaskView.js';
 
 function App() {
   let [user, setUser] = useState(null);
