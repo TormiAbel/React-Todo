@@ -4,7 +4,6 @@ import React, { useState } from "react";
 export default function Login() {
   let [username, setUsername] = useState('');
   let [password, setPassword] = useState('');
-  const secretKey = "pass";
 
   const userNN = (event) => {
     setUsername(event.target.value);
