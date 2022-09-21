@@ -1,23 +1,20 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
+import TaskList from './components/views/TaskList';
+import Login from './components/views/Login';
+import Logout from './components/views/Logout';
+import 'antd/dist/antd.css';
 import './App.css';
-import React, { useState } from 'react';
-import TaskView from './TaskView.js';
-import Login from './Login.js';
 
 function App() {
-  let [user, setUser] = useState(null);
-  const greetRndm = <p>Logi Sisse!</p>
-  const greetUser = <p>Tere {user?.username}</p>
-  
   return (
-    <div className="App">
-      <header className="App-header">
-        {!user && greetRndm}
-        {user && greetUser}
-
-        {!user && <Login user={user} setUser={setUser}/>}
-        {user && <TaskView user={user} setUser={setUser}/>}
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<TaskList />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+      </Routes>
+    </Router>
   );
 }
 
